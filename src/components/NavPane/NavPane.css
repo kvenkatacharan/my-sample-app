@@ -1,0 +1,23 @@
+.navpane {
+    background-color: rgb(0, 44, 58);
+    width:12vw;
+    height: 100vw;
+    padding: 20px;
+    margin:0px;
+}
+
+.nav-text {
+    text-decoration: none;
+    color:aliceblue;
+    padding:50px;
+    margin:50px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.list {
+    list-style: none;
+}
+.test{
+    display: flex;
+}
