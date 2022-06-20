@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react"
+import axios from "axios"
 import TodosItem from "../TodosItem/TodosItem"
 import "./Todos.css"
 
@@ -7,9 +8,7 @@ const Todos = () => {
     const url = "https://jsonplaceholder.typicode.com/todos"
 
     const fetchData = async () => {
-        const response = await fetch(url);
-      const dataArr = await response.json();
-      setTodosList(dataArr);
+        axios.get(url).then(response => setTodosList(response.data))
         }
 
     useEffect(()=>{
