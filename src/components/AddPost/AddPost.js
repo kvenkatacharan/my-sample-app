@@ -19,7 +19,7 @@ const AddPost = () => {
     }
 return (
     <div className="body-format">
-        <div className="inner-box">
+        <div className="inner-box-ap">
         <h1>AddPost</h1>
         <div className="format">
             <form>
@@ -29,7 +29,7 @@ return (
             <input type="text" name="title" className="text-box" value={title} onChange={handleChange}/><br />
             <label htmlFor="body" className="label" >Body</label>
             <input type="text" name="body" className="text-box" value={body} onChange={handleChange} /><br />
-            <button onClick={addPost}>Add Post</button>
+            <button className="button1" onClick={addPost}>Add Post</button>
             </form>
         </div>
         </div>

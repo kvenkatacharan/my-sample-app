@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import "./App.css";
+import Welcome from "./components/Welcome/Welcome";
 import NavPane from "./components/NavPane/Navpane";
 import Todos from "./components/Todos/Todos";
 import Posts from "./components/Posts/Posts";
@@ -14,6 +15,7 @@ function App() {
       <div className="layout">
       <NavPane />
       <Routes>
+        <Route path="/" element = {<Welcome />} />
         <Route path = "/todos" element = {<Todos />} />
         <Route path = "/posts" element = {<Posts />} />
         <Route path = "/addpost" element = {<AddPost />} />
