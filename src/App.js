@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import "./App.css";
 import NavPane from "./components/NavPane/Navpane";
 import Todos from "./components/Todos/Todos";
-import Posts from "./components/Posts/Posts"
+import Posts from "./components/Posts/Posts";
+import AddPost from "./components/AddPost/AddPost";
 import ErrorPage from "./ErrorPage";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path = "/todos" element = {<Todos />} />
         <Route path = "/posts" element = {<Posts />} />
+        <Route path = "/addpost" element = {<AddPost />} />
         <Route path="*" element = {<ErrorPage />} />
       </Routes>
       </div>

@@ -6,8 +6,8 @@ const NavPane = () => {
     return(
         <div className="navpane">
             <ul className="list">
-                <Link to="/todos" className="nav-text"><li>Todos</li></Link>
-                <Link to="/posts" className="nav-text"><li>Posts</li></Link>
+                <Link to="/todos" className="nav-text" ><li>Todos</li></Link>
+                <Link to="/posts" className="nav-text" ><li>Posts</li></Link>
             </ul>
         </div>
         )

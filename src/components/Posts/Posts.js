@@ -19,7 +19,7 @@ const Posts = () => {
         <div className='body-format'>
             <div className="header">
             <h1 className="heading">Posts</h1>
-            <button className="button" >Add Post</button></div>
+            <button className="button" onClick={event => window.location.href = "/addpost"} >Add Post</button></div>
             <div className="inner-box">
                 {
                 postsList.map(postsObject => <PostsItem postsObject = {postsObject} />)
