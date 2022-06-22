@@ -6,6 +6,7 @@ import Todos from "./components/Todos/Todos";
 import Posts from "./components/Posts/Posts";
 import AddPost from "./components/AddPost/AddPost";
 import ErrorPage from "./ErrorPage";
+import PostDetails from "./components/PostDetails/PostDetails";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path = "/todos" element = {<Todos />} />
         <Route path = "/posts" element = {<Posts />} />
         <Route path = "/addpost" element = {<AddPost />} />
+        <Route path="/posts/:id" element = {<PostDetails />} />
         <Route path="*" element = {<ErrorPage />} />
       </Routes>
       </div>
