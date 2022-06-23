@@ -1,29 +1,41 @@
 import {useState, useEffect} from "react"
 import axios from "axios"
 import PostsItem from "../PostsItem/PostsItem"
-import "./Posts.css"
+import styles from "./Posts.module.css"
 
 const Posts = () => {
     const [postsList, setpostsList] = useState([])
+    const [limit, setLimit] = useState (5)
     const url = "https://jsonplaceholder.typicode.com/posts"
 
     const fetchData = async () => {
-        axios.get(url).then(response => setpostsList(response.data))
+        axios.get(url, {
+            params: { _limit:limit }
+        }).then(response => setpostsList(response.data))
         }
 
     useEffect(()=>{
         fetchData();
-    }, [])
+    }, [limit])
+
+    const loadPosts = () => {
+        setLimit(limit+5)
+    }
 
     return (
-        <div className='body-format'>
-            <div className="header">
-            <h1 className="heading">Posts</h1>
-            <button className="button" onClick={event => window.location.href = "/addpost"} >Add Post</button></div>
-            <div className="inner-box">
+        <div className={styles.bodyFormat}>
+            <div className={styles.header}>
+            <h1 className={styles.heading}>Posts</h1>
+            <button className={styles.button} onClick={event => window.location.href = "/addpost"} >Add Post</button></div>
+            <div className={styles.innerBox}>
                 {
                 postsList.map(postsObject => <PostsItem postsObject = {postsObject} />)
                 }
+                <div>
+                {
+                    postsList.length >= limit && <button className = {styles.load} onClick={loadPosts}>Load more</button>
+                }
+                </div>
             </div>
         </div>
       );

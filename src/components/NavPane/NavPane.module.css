@@ -6,15 +6,7 @@
     margin:0px;
 }
 
-.active-class {
-    background-color: rgb(0, 18, 24);
-    width: 12vw;
-    height: 20px;
-    padding: 20px;
-    margin: 0px;
-}
-
-.nav-text {
+.navText {
     text-decoration: none;
     color:aliceblue;
     padding:50px;

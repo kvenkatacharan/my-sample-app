@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import "./NavPane.css"
+import styles from "./NavPane.module.css"
 
 const NavPane = () => {
     return(
-        <div className="navpane">
-            <ul className="list">
-                <Link to="/todos" className="nav-text" ><li>Todos</li></Link>
-                <Link to="/posts" className="nav-text" ><li>Posts</li></Link>
+        <div className={styles.navpane}>
+            <ul className={styles.list}>
+                <Link to="/todos" className={styles.navText} ><li>Todos</li></Link>
+                <Link to="/posts" className={styles.navText} ><li>Posts</li></Link>
             </ul>
         </div>
         )

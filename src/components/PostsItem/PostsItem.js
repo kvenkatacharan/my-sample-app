@@ -1,9 +1,9 @@
-import "./PostsItem.css" 
+import styles from "./PostsItem.module.css" 
 const PostsItem = (props) => {
     const {id, title, body} = props.postsObject;
     const url = "/posts/" + id
     return(
-    <div className="card" onClick={event=>window.location.href = url}>
+    <div className={styles.card} onClick={event=>window.location.href = url}>
         <ul>
         <li>{id}</li>
         <li>{title}</li>

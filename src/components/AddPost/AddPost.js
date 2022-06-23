@@ -1,6 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
-import "./AddPost.css"
+import styles from "./AddPost.module.css"
 
 const AddPost = () => {
     const [post, setPost] = useState({
@@ -18,18 +18,18 @@ const AddPost = () => {
         axios.post("https://jsonplaceholder.typicode.com/posts", post).then(response => alert("post added")).catch(error => console.log(error))
     }
 return (
-    <div className="body-format">
-        <div className="inner-box-ap">
+    <div className={styles.bodyFormat}>
+        <div className={styles.innerBox}>
         <h1>AddPost</h1>
-        <div className="format">
+        <div className={styles.format}>
             <form>
-            <label htmlFor="id" className="label">ID</label>
-            <input type="text" name="id" className="text-box" value = {id} onChange={handleChange}/><br />
-            <label htmlFor="title" className="label">Title</label>
-            <input type="text" name="title" className="text-box" value={title} onChange={handleChange}/><br />
-            <label htmlFor="body" className="label" >Body</label>
-            <input type="text" name="body" className="text-box" value={body} onChange={handleChange} /><br />
-            <button className="button1" onClick={addPost}>Add Post</button>
+            <label htmlFor="id" className={styles.label}>ID</label>
+            <input type="text" name="id" className={styles.textBox} value = {id} onChange={handleChange}/><br />
+            <label htmlFor="title" className={styles.label}>Title</label>
+            <input type="text" name="title" className={styles.textBox} value={title} onChange={handleChange}/><br />
+            <label htmlFor="body" className={styles.label} >Body</label>
+            <input type="text" name="body" className={styles.textBox} value={body} onChange={handleChange} /><br />
+            <button className={styles.button} onClick={addPost}>Add Post</button>
             </form>
         </div>
         </div>
