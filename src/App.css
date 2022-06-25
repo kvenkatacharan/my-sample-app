@@ -50,6 +50,10 @@ padding: 0%;
   border: 1px solid grey;
   padding: 5px;
 }
+.addPost{
+  margin: 5px;
+  padding: 5px;
+}
 .addPostArea{
 width: 75vw;
 height: 10vh;

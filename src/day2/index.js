@@ -12,7 +12,6 @@ function Home() {
   }, []);
   const getPosts = () => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
-      console.log("getting posts", res);
       setPosts(res.data);
     });
   };
