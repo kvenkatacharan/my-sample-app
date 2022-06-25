@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import AddPost from "./Components/AddPost/AddPost";
 import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
 function Home() {
-  //listmode tur or false
+  //listmode true or false
   const [lm, setLM] = useState(true);
   const [posts,setPosts]=useState([])
 
@@ -22,8 +22,8 @@ const Header = ()=>{
       </div>
     )
 }
-  return (
-      <div>
+return (
+      <div >
     <Header />
     <br/>
     {(lm) ?<DisplayPosts posts={posts}/>:<AddPost />}

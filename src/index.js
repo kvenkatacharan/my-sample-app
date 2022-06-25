@@ -1,24 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  BrowserRouter,
-  Routes,
-  Route,
+  BrowserRouter
 } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import DayTwo from './day2/index'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter >
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/dayOne" element={<div>to add</div>} />
-      <Route path="/dayTwo" element={< DayTwo/>} />
-    </Routes>
+    <App />
     </BrowserRouter>
   </React.StrictMode>
 );
