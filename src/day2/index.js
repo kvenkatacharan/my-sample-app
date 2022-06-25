@@ -4,7 +4,7 @@ import AddPost from "./Components/AddPost/AddPost";
 import ViewPost from "./Components/ViewPost/ViewPost";
 import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
 function Home() {
-  //listmode true or false
+  //viewPost true or false
   const [vp, setVP] = useState(false);
   const [posts, setPosts] = useState([]);
   const [postId, setPID]=useState();

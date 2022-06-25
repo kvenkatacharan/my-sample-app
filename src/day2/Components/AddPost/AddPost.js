@@ -1,8 +1,10 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../../../App.css";
 function AddPost() {
+    const fieldRef = useRef();
   const [post, setPost] = useState({ title: "", body: "", userId: 1 });
+  useEffect(()=>{fieldRef.current.focus()},[])
   const addPost = (e) => {
     e.preventDefault();
     axios
@@ -17,7 +19,7 @@ function AddPost() {
   return (
     <div className="addPost">
       <form onSubmit={(e) => addPost(e)}>
-        <input type="text" placeholder="title" onChange={(e)=>setPost({...post, title:e.target.value})}></input>
+        <input type="text" ref={fieldRef} placeholder="title" onChange={(e)=>setPost({...post, title:e.target.value})}></input>
         <input
           className="addPostArea"
           type="textarea"

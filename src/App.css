@@ -27,7 +27,9 @@ padding: 0%;
   width: 85vw;
   margin-left: 15vw;
   border: 2px solid black;
-  min-height: 100vh;
+  min-height: 97.8vh;
+  max-height: 97.8vh;
+  overflow-y: auto;
 }
 .navItem{
   border: 1px solid grey;;
