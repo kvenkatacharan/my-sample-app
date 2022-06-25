@@ -1,6 +1,4 @@
 export default function DisplayPosts(props) {
-    console.log("called",props.posts.length)
-    
     return ( <div>
         display post list
         {(props.posts.length > 0)?props.posts.map((post)=>{
