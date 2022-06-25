@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import AddPost from "./Components/AddPost/AddPost";
 import ViewPost from "./Components/ViewPost/ViewPost";
 import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
 function Home() {
