@@ -1,14 +1,16 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../../App.css";
 function AddPost() {
   const [post, setPost] = useState({ title: "", body: "", userId: 1 });
+  useEffect(()=>{console.log(post)},[post])
   const addPost = (e) => {
     e.preventDefault();
     axios
       .post("https://jsonplaceholder.typicode.com/posts", post)
-      .then(() => {
+      .then((res) => {
         window.alert("success");
+        console.log(res)
       })
       .catch(() => {
         window.alert("success");
@@ -17,11 +19,12 @@ function AddPost() {
   return (
     <div className="addPost">
       <form onSubmit={(e) => addPost(e)}>
-        <input type="text" placeholder="title"></input>
+        <input type="text" placeholder="title" onChange={(e)=>setPost({...post, title:e.target.value})}></input>
         <input
           className="addPostArea"
           type="textarea"
           placeholder="What is happening...?"
+          onChange={(e)=>setPost({...post, body:e.target.value})}
         ></input>
         <button className="addPostBtn" type="submit">
           Submit
