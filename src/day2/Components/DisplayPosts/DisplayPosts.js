@@ -6,7 +6,7 @@ export default function DisplayPosts(props) {
         {(props.posts.length > 0)?props.posts.map((post)=>{
             let{id, title,body}=post;
             return(
-                <div className="post" key={id} onClick={()=>{console.log("div is clicked",id)}}>
+                <div className="post" key={id} onClick={()=>{props.setPostId(id)}}>
                 <h2>{title}</h2>
                 <p>{body}</p>)
             </div>

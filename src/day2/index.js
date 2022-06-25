@@ -1,11 +1,18 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AddPost from "./Components/AddPost/AddPost";
+import ViewPost from "./Components/ViewPost/ViewPost";
 import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
 function Home() {
   //listmode true or false
-  const [lm, setLM] = useState(true);
+  const [vp, setVP] = useState(false);
   const [posts, setPosts] = useState([]);
+  const [postId, setPID]=useState();
+
+  const viewPost=(pid)=>{
+    setVP(true);
+    setPID(pid);
+  }
 
   useEffect(() => {
     getPosts();
@@ -15,7 +22,7 @@ function Home() {
       setPosts(res.data);
     });
   };
-  return <div>{lm ? <DisplayPosts posts={posts} /> : <AddPost />}</div>;
+  return <div>{vp ? <ViewPost postId={postId} back={()=>setVP(false)} />:<DisplayPosts posts={posts} setPostId={(pid)=>viewPost(pid)} />}</div>;
 }
 
 export default Home;

@@ -3,14 +3,12 @@ import { useEffect, useState } from "react";
 import "../../../App.css";
 function AddPost() {
   const [post, setPost] = useState({ title: "", body: "", userId: 1 });
-  useEffect(()=>{console.log(post)},[post])
   const addPost = (e) => {
     e.preventDefault();
     axios
       .post("https://jsonplaceholder.typicode.com/posts", post)
       .then((res) => {
         window.alert("success");
-        console.log(res)
       })
       .catch(() => {
         window.alert("success");
