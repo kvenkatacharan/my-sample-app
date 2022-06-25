@@ -1,6 +1,10 @@
+import "../../../App.css";
 function AddPost() {
     return ( <div>
-        Addpost form
+        <form onSubmit={()=>{console.log("adding")}}>
+            <input className="addPostArea"type="textarea" placeholder="What is happening...?"></input>
+            <button className="addPostBtn"type="submit">Submit</button>
+        </form>
     </div> );
 }
 
