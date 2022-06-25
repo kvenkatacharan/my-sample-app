@@ -4,6 +4,7 @@ import AddPost from "../AddPost/AddPost";
 export default function DisplayPosts(props) {
   return (
     <div>
+        <h1>Home </h1>
       <AddPost />
       {props.posts.length > 0 ? (
         <div>

@@ -12,7 +12,7 @@
   border: 2px solid black;
   min-height: 100vh;
   height:auto;
-  width: 15vw;
+  width: 30vw;
   position: fixed;
 }
 .navItems{
@@ -24,28 +24,29 @@ padding: 0%;
 }
 .body{
   padding: 5px;
-  width: 85vw;
-  margin-left: 15vw;
+  width: 70vw;
+  margin-left: 30vw;
   border: 2px solid black;
   min-height: 97.8vh;
   max-height: 97.8vh;
   overflow-y: auto;
 }
 .navItem{
-  border: 1px solid grey;;
+  border-bottom: 1px solid grey;
+  padding: 0 0 15px 0;
   width: 90%;
-  padding: 0.5px;
   margin: 2px;
-}
-.link{
-  text-decoration: none;
+  
 }
 .navItem:hover{
-  background-color: black;
-  color: white;
+  background-color: #3b4a54;
+  padding: 0 0 15px 0;
   width: 90%;
-  padding: 0.5px;
   margin: 2px;
+}
+.navItemSearch{
+  min-width: 90%;
+  padding: 5px;
 }
 .post{
   margin: 5px;

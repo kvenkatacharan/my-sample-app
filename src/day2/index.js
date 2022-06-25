@@ -11,7 +11,6 @@ function Home() {
   const [ctr, addCtr] = useState(5);
   
   const loadMore = () => {
-    console.log("loading");
     var remainingTransactions = postsFull.length - ctr;
     if (remainingTransactions >= 5) {
       addCtr(ctr + 5);
@@ -22,7 +21,6 @@ function Home() {
     }
   };
 
-  useEffect(()=>{console.log(posts)},[posts])
   const viewPost=(pid)=>{
     setVP(true);
     setPID(pid);
