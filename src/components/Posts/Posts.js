@@ -37,7 +37,8 @@ const Posts = () => {
                 }
             </div>
             </div> }
-           
+            <div className={styles.redux}>
+            <button className={styles.load} onClick={event => window.location.href = "/postsredux"} >Posts Redux</button></div>           
             
         </div>
       );

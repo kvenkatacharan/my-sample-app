@@ -1,27 +1,23 @@
 import {useState, useEffect} from "react"
 import axios from "axios"
-import styles from "../Posts/Posts.module.css"
+import styles from "./PostsTable.module.css"
 import Pagination from "../Pagination/Pagination"
 
 const PostsTable = () => {
     const [postsList, setpostsList] = useState([])
-    const [limit, setLimit] = useState (5)
-    const [displayList, setDisplayList] = useState([])
-
+    
+   const limit = 5
     const url = "https://jsonplaceholder.typicode.com/posts"
 
     const fetchData = async () => {
         axios.get(url).then(response => setpostsList(response.data))
         }
 
+    const [displayList, setDisplayList] = useState([postsList.slice(0,limit)])
+
     useEffect(()=>{
         fetchData();
-        setDisplayList(postsList.slice(0,limit))
     }, [])
-
-    const loadPosts = () => {
-        setLimit(limit+5)
-    }
 
     const pageHandler = (page) => {
         setDisplayList(postsList.slice((page-1)*limit, page*limit))
@@ -52,11 +48,6 @@ const PostsTable = () => {
 }
                 </tbody>
             </table>
-            <div>
-                {/*
-                    postsList.length >= limit && <button className = {styles.load} onClick={loadPosts}>Load more</button>*/
-                }
-            </div>
             <Pagination dataLength = {postsList.length} limit = {limit} pageHandler={pageHandler}/>
             </div>
             
