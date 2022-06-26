@@ -6,6 +6,7 @@ import NavPane from "./components/NavPane/Navpane";
 import Todos from "./components/Todos/Todos";
 import Posts from "./components/Posts/Posts";
 import AddPost from "./components/AddPost/AddPost";
+import PostsTable from "./components/PostsTable/PostsTable"
 import ErrorPage from "./ErrorPage";
 import PostDetails from "./components/PostDetails/PostDetails";
 
@@ -20,6 +21,7 @@ function App() {
         <Route path = "/posts" element = {<Posts />} />
         <Route path = "/addpost" element = {<AddPost />} />
         <Route path="/posts/:id" element = {<PostDetails />} />
+        <Route path="/poststable" element = {<PostsTable />} />
         <Route path="*" element = {<ErrorPage />} />
       </Routes>
       </div>

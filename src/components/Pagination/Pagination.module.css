@@ -1,0 +1,18 @@
+.pagesContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 5px;
+}
+
+.pages {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    margin: 3px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
