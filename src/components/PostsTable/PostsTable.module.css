@@ -1,0 +1,69 @@
+.bodyFormat {
+    width: 85vw;
+    height: 100vh;
+    background-color: rgb(227, 242, 255);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.innerBox{
+    width: 80vw;
+    height: 60vh;
+    background-color: rgb(180, 212, 255);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    color:rgb(0, 19, 36);
+    font-size: 36px;
+}
+
+.button {
+    background-color: rgb(0, 44, 58);
+    border: 0px;
+    border-radius: 4px;
+    width: 100px;
+    height: 48px;
+    padding: 2px;
+    margin-left: 70vw;
+    color: aliceblue;
+}
+
+.load {
+    background-color: rgb(0, 44, 58);
+    border: 0px;
+    border-radius: 4px;
+    width: 100px;
+    height: 48px;
+    padding: 2px;
+    margin: 5px;
+    color: aliceblue;
+}
+
+th, td {
+    padding: 5px;
+    margin: 3px;
+}
+
+th {
+    background-color: aliceblue;
+}
+
+td {
+    background-color:rgb(236, 236, 236);
+}
