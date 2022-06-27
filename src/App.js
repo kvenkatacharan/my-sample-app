@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Insta from "./Components/Body/Insta";
+import Instagram from "./Components/Body/InstaTwo";
 import Todos from "./Components/Body/Todos";
 import Twitter from "./Components/Body/Twitter";
 import Header from "./Components/Header/Header";
@@ -20,13 +21,14 @@ function App() {
       ) : (
         <div>
           <Sidebar />
-          <Header logout={()=>{}}/>
+          {/*<Header logout={()=>{}}/>*/}
         </div>
       )}
       <Routes>
         <Route path="/todos" element={<Todos />} />
         <Route path="/insta" element={<Insta />} />
         <Route path="/twitter" element={<Twitter />} />
+        <Route path="/instagram" element={<Instagram />} />
       </Routes>
       </BrowserRouter>
     </div>

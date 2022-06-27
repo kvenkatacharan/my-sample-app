@@ -16,12 +16,17 @@ function Sidebar() {
         </li>
         <li>
           <Link style={style} to="/insta">
-            instagram
+            insta
           </Link>
         </li>
         <li>
           <Link style={style} to="/twitter">
             twitter
+          </Link>
+          </li>
+          <li>
+          <Link style={style} to="/instagram">
+            Instagram
           </Link>
         </li>
       </ul>
