@@ -1,18 +1,18 @@
-.App {
-  text-align: center;
-}
+
 .sidebar-inactive{
-  width: 0;
+  display:"none"
 }
 .sidebar{
   display: flex;
   flex-direction: column;
+  background-color: blueviolet;
   width: 15vw;
   float: left;
   padding: 15px;
-  margin-left: 0;
+  margin:0;
+  z-index: 1;
   border-right:solid 1px black;
-  height: 97.9vh;
+  height: 90vh;
 }
 .sidebar ul{
  list-style: none;
@@ -20,6 +20,7 @@
  margin-left: 0;
  padding: 0;
 }
+
 .sidebar ul li{
   padding: 15px;
   border-bottom: 1px solid grey;
@@ -27,8 +28,8 @@
  }
  .sidebar ul li:hover{
   padding: 18px;
-  color: blue;
-  border-bottom: 1px solid blue;
+  color: white;
+  border-bottom: 1px solid white;
  }
 
 
@@ -37,7 +38,7 @@
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
-   width: 80vw;
+   width: auto;
    height: 8vh;
    background-color: blue;
    border-radius:15px ;
@@ -46,15 +47,23 @@
 
  .body{
    width: auto;
-   height:80vh;
+   height:89vh;
+   overflow-y: auto;
  }
  .pagination{
    background-color: blue;
-   width: 80vw;
-   position: fixed;
+   width: auto;
    text-align: center;
-   margin-left: 17.5vw;
    bottom: 0;
+   margin:0;
+ }
+ .table{
+   min-height: 84vh;
+   max-height: 84vh;
+   width: 79vw;
+ }
+ .table thead{
+   border: 1px solid black;
  }
  .pagination ul{
    list-style: none;
@@ -70,6 +79,30 @@
  .active-page{
    background-color: blue;
    color: white;
+ }
+ .insta{
+   background-color: white;
+   color: blue;
+ }
+ .card{
+   height:40vh;
+   width:50vw;
+   margin: auto;
+   border:1px solid black;
+   display :flex;
+   flex-direction: column;
+   border-radius: 10px;
+ }
+ .card-title{
+   border-bottom: 1px solid black;
+ }
+ .card-img{
+   background-color: black;
+   border-radius: 50%;
+   padding: 5px;
+   height: 200px;
+   width: 200px;
+   margin: 5px;
  }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

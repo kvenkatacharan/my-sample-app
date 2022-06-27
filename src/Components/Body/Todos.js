@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import dash from "lodash";
+import { useSelector } from "react-redux";
 const pageSize = 10;
 function Todos() {
+  const login = useSelector(state=> state.login.value.loggedIn);
   const [todos, setTD] = useState([]);
   const [posts, setPosts] = useState([]);
   const [pageNo, setPageNo] = useState(1);
@@ -25,9 +27,9 @@ function Todos() {
     setPosts(posts);
   }
   useEffect(() => getTodos, []);
-  return (
-    <div className="todo">
-      <table style={{ border: "2px solid black" }}>
+  return (<div className="body">
+    {login ? <div className="todo">
+      <table className={"table"}style={{ border: "2px solid black" }}>
         <thead>
           <tr>
             <th>ID</th>
@@ -69,6 +71,7 @@ function Todos() {
           ))}
         </ul>
       </nav>
+      </div> : "not logged in"}
     </div>
   );
 }
