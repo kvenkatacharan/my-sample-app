@@ -5,15 +5,17 @@ import Pagination from "../Pagination/Pagination"
 
 const PostsTable = () => {
     const [postsList, setpostsList] = useState([])
-    
-   const limit = 5
+    const [displayList, setDisplayList] = useState([])    
+    const limit = 5
     const url = "https://jsonplaceholder.typicode.com/posts"
 
     const fetchData = async () => {
-        axios.get(url).then(response => setpostsList(response.data))
+        axios.get(url).then(response => {
+            setpostsList(response.data)
+            setDisplayList(response.data.slice(0,limit))})
         }
 
-    const [displayList, setDisplayList] = useState([postsList.slice(0,limit)])
+
 
     useEffect(()=>{
         fetchData();
