@@ -53,6 +53,17 @@
    margin-left: 17.5vw;
    bottom: 0;
  }
+ .pagination ul{
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+ }
+ .page-link{
+   text-align: center;
+   padding: 0.25px;
+   border: 0.5px solid black;
+ }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
