@@ -12,8 +12,6 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
   const login = useSelector(state=> state.login.value.loggedIn);
-  console.log(login)
-
   return (
     <div className="App">
       <BrowserRouter>

@@ -5,11 +5,9 @@ export const sidebarSlice = createSlice({
     initialState:{value:{active:true}},
     reducers:{
         activate:(state)=>{
-            console.log("activating")
             state.value ={active:true}
         },
         deactivate:(state)=>{
-            console.log("deactivating")
             state.value ={active:false}
         }
     }
