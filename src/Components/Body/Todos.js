@@ -20,10 +20,8 @@ function Todos() {
       });
   };
   const setPagination= (page)=>{
-      console.log("setting pagination", page)
     setPageNo(page);
     var posts = dash(todos).slice((page-1)*pageSize).take(pageSize).value();
-    console.log(posts);
     setPosts(posts);
   }
   useEffect(() => getTodos, []);
@@ -66,7 +64,7 @@ function Todos() {
         <ul>
           {pages.map((page) => (
             <li className="page-link">
-              <button onClick={()=>setPagination(page)}>{page}</button>
+              <button className ={(pageNo===page ? "active-page" : "page")}onClick={()=>setPagination(page)}>{page}</button>
             </li>
           ))}
         </ul>

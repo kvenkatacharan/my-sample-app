@@ -1,18 +1,15 @@
-import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link} from "react-router-dom";
+//import { loginSelector } from "../../features/login";
 
 
 function Sidebar() {
-  const [showSB, setSSB] = useState("visible");
+const display = useSelector(state=> state.sidebar.value.active);
+
 
   return (
-    <div className="sidebar">
-      {showSB === "visible" ? (
-        <button onClick={() => setSSB("hidden")}>hide</button>
-      ) : (
-        <button onClick={() => setSSB("visible")}>show</button>
-      )}
-      <ul style={{ visibility: showSB }}>
+    <div className={display?"sidebar":"sidebar-inactive"}>
+      <ul className={display?"":"sidebar-inactive"}>
         <li>
           <Link to="/todos">todos</Link>
         </li>

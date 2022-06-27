@@ -1,7 +1,11 @@
-function Login(props) {
+import { useDispatch } from "react-redux";
+import {login} from '../../features/login';
+
+function Login() {
+  const dispatch = useDispatch();
   return (
     <div>
-      <button onClick={() => props.onClick(true)}>Login</button>
+      <button onClick={() => dispatch(login())}>Login</button>
     </div>
   );
 }

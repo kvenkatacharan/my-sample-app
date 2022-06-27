@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.sidebar-inactive{
+  width: 0;
+}
 .sidebar{
   display: flex;
   flex-direction: column;
@@ -64,6 +67,10 @@
    border: 0.5px solid black;
  }
 
+ .active-page{
+   background-color: blue;
+   color: white;
+ }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
