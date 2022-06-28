@@ -22,20 +22,28 @@ const Posts = () => {
         setLimit(limit+5)
     }
 
+    const handleScroll = (e) => {
+        if (e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight) {
+            loadPosts()
+          }
+    }
+
+
     return (
         <div className={styles.bodyFormat}>
             <div className={styles.header}>
             <h1 className={styles.heading}>Posts</h1>
             <button className={styles.button} onClick={event => window.location.href = "/addpost"} >Add Post</button></div>
-            {<div className={styles.innerBox}>
+            {<div className={styles.innerBox} onScroll={handleScroll}>
                 {
                 postsList.map(postsObject => <PostsItem postsObject = {postsObject} />)
                 }
                 <div>
-                {
-                    postsList.length >= limit && <button className = {styles.load} onClick={loadPosts}>Load more</button>
+                {/*
+                    postsList.length >= limit && <button className = {styles.load} onClick={loadPosts}>Load more</button>*/
+                    
                 }
-            </div>
+                </div>
             </div> }
             <div className={styles.redux}>
             <button className={styles.load} onClick={event => window.location.href = "/postsredux"} >Posts Redux</button></div>           
