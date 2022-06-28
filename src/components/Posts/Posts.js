@@ -23,6 +23,10 @@ const Posts = () => {
     }
 
     const handleScroll = (e) => {
+        //scrollTop is giving the position of the scroll
+        //scrollHeight is the height of total data
+        //clientHeight is the height of visible data
+        //scrollHeight and clientHeight are fixed values, scrollTop is varying while scrolling
         if (e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight) {
             loadPosts()
           }
