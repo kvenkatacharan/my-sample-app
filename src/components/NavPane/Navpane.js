@@ -9,6 +9,7 @@ const NavPane = () => {
                 <Link to="/todos" className={styles.navText} ><li>Todos</li></Link>
                 <Link to="/posts" className={styles.navText} ><li>Posts</li></Link>
                 <Link to="/poststable" className={styles.navText} ><li>Posts Table</li></Link>
+                <Link to="/imageslider" className={styles.navText} ><li>Image Slider</li></Link>
             </ul>
         </div>
         )

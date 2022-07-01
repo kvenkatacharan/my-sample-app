@@ -10,6 +10,7 @@ import PostsTable from "./components/PostsTable/PostsTable"
 import ErrorPage from "./ErrorPage";
 import PostDetails from "./components/PostDetails/PostDetails";
 import PostsRedux from "./components/PostsRedux/PostsRedux";
+import ImageSlider from "./components/ImageSlider/ImageSlider";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/posts/:id" element = {<PostDetails />} />
         <Route path="/poststable" element = {<PostsTable />} />
         <Route path = "/postsredux" element = {<PostsRedux />} />
+        <Route path="/imageslider" element={<ImageSlider />} />
         <Route path="*" element = {<ErrorPage />} />
       </Routes>
       </div>
